@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+body{
+background-color: #222831;
+}
+ul li{
+    list-style: none;
+}
+header{
+    position: fixed;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #afafaf93;
+    z-index: 100;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 85%;
+    margin: auto;
+
+}
+header nav h2{
+    color: #fff;
+    font-size: 30px;
+}
+header nav h2 span{
+    color: #08d665;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li{
+    position: relative;
+    margin: 0 25px;
+    height: 80px;
+    line-height: 80px;
+}
+header nav ul li a{
+    color: #c8c6c6;
+    font-size: 17px;
+}
+header nav ul li::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #08d665;
+    transition: 0.3s;
+}
+header nav ul li:hover::after,
+header nav ul li.activ::after{
+    width: 100%;
+}
+header nav .links a i{
+    color: #08d665;
+    font-size: 24px;
+    margin-left: 15px;
+}
+header nav .links a i:hover{
+    color: #fff;
+}
+
+#menu{
+    display: none;
+}
+
+.boxs{
+    display: flex;
+    margin-top: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
+    flex-direction: row;
+    flex-wrap:  wrap ;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.boxs .box{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-image: url(../صور/0.png);
+    background-position: center;
+    background-size: cover;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+ 
+.boxs .box:hover{
+    
+}
+
+.boxs .box .text{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 300px;
+    height: 70px;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    padding-top: 20px;
+    color: black;
+
+}
+
+
+@media(max-width: 980px){
+    header nav ul{
+        position: absolute;
+        right: -420px;
+        top: 100%;
+        flex-direction: column;
+        background-color: black;
+        border-left: 1px solid #444444a8;
+        width: 400px;
+        height: 100vh;
+        text-align: center;
+        padding: 20px 0;
+        transition: 0.5s;
+    }
+    header nav ul.active{
+        right: 0px;
+    }
+    header nav .links{
+        display: none;
+    }
+    #menu{
+        display: block;
+        font-size: 30px;
+        color: #fff;
+    }
+}
