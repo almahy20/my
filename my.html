@@ -1,47 +1,201 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عبدالرحمن سيد</title>
-    <link rel="stylesheet" href="./css/my.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <h2><span>MR </span>ABDO</h2>
-            <ul id="link">
-                <li class="activ"><a href="file:///F:/%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D9%87/%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8/%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D8%A7%D9%84%D8%B4%D8%AE%D8%B5%D9%8A/my.html">home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">skills</a></li>
-                <li><a href="#">projects</a></li>
-                <li><a href="#">cotact</a></li>
-            </ul>
-            <div class="links">
-                <a href="https://www.facebook.com/profile.php?id=100030933789349&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-            <i class="fa-solid fa-bars" id="menu"></i>
-        </nav>
-    </header>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
 
+}
+body{
 
-    <div class="box1">
-        <div class="box2">
-            <div class="box3">
-                <h1>abduleahman sayed</h1>
-                <span>web designer</span>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem doloribus temporibus eius alias laboriosam! Iste fuga accusamus consectetur velit magnam.</p>
-                <a href="file:///F:/%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D9%87/%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8/%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D8%A7%D9%84%D8%B4%D8%AE%D8%B5%D9%8A/html/my1.html" class="btn">my works</a>
-            </div>
-            <div class="img">
-            <img src="./صور/h.png" alt="" class="img">
+}
+ul li{
+    list-style: none;
+}
+header{
+    position: fixed;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #afafaf93;
+    z-index: 100;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 85%;
+    margin: auto;
 
-            </div>
-        </div>
-    </div>
-    <script src="./js/my.js"></script>
-</body>
-</html>
+}
+header nav h2{
+    color: #fff;
+    font-size: 30px;
+}
+header nav h2 span{
+    color: #08d665;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li{
+    position: relative;
+    margin: 0 25px;
+    height: 80px;
+    line-height: 80px;
+}
+header nav ul li a{
+    color: #c8c6c6;
+    font-size: 17px;
+}
+header nav ul li::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #08d665;
+    transition: 0.3s;
+}
+header nav ul li:hover::after,
+header nav ul li.activ::after{
+    width: 100%;
+}
+header nav .links a i{
+    color: #08d665;
+    font-size: 24px;
+    margin-left: 15px;
+}
+header nav .links a i:hover{
+    color: #fff;
+}
+.box1{
+    background-image: url(../صور/00012.jpg);
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.box1 .box2{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+.box1 .box2 .box3{
+    width: 50%;
+}
+.box1 .box2 .box3 h1{
+    color: #fff;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.box1 .box2 .box3 span{
+    color: #08d665;
+    font-size: 40px;
+}
+.box1 .box2 .box3  p{
+    font-size: 17px;
+    color: #9c9c9c;
+    margin:  10px 0 50px;
+    line-height: 1.4;
+}
+.box1 .box2 .box3 .btn{
+    color: #fff;
+    background-color: #08d665;
+    border: 1px solid  #08d665;
+    padding: 14px 40px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.box1 .box2 .box3 .btn:hover{
+    background-color: transparent;
+}
+.box1 .box2 .img{
+    width: 35%;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    
+    
+}
+#menu{
+    display: none;
+}
+.box1 .box2 .img img{
+    width:  100%;
+}
+@media(max-width: 980px){
+    header nav ul{
+        position: absolute;
+        right: -420px;
+        top: 100%;
+        flex-direction: column;
+        background-color: black;
+        border-left: 1px solid #444444a8;
+        width: 400px;
+        height: 100vh;
+        text-align: center;
+        padding: 20px 0;
+        transition: 0.5s;
+    }
+    header nav ul.active{
+        right: 0px;
+    }
+    header nav .links{
+        display: none;
+    }
+    #menu{
+        display: block;
+        font-size: 30px;
+        color: #fff;
+    }
+    .box1{
+        height: auto;
+    }
+    .box1 .box2{
+        flex-direction: column;
+    }
+    .box1 .box2 .img{
+        position:relative;
+        width: 70%;
+    }
+    .box1 .box2 .box3{
+        width: 80%;
+        text-align: center;
+        margin-top: 150px;
+        margin-bottom: 60px;
+    }
+    .box1 .box2 .box3 h1{
+        font-size: 50px;
+    }
+    .box1 .box2 .box3 span{
+        font-size: 30px;
+    }
+}
+@media(max-width: 450px){
+    .box1 .box2 .box3 h1{
+        font-size: 35px;
+    }
+    .box1 .box2 .box3 span{
+        font-size: 25px;
+    }
+    .box1 .box2 .box3 p{
+        font-size: 17px;
+    }
+    .box1 .box2 .img{
+        width: 80%;
+    }
+    header nav ul {
+        width: 320px;
+    }
+
+}
