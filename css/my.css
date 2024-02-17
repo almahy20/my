@@ -194,5 +194,8 @@ header nav .links a i:hover{
     .box1 .box2 .img{
         width: 80%;
     }
+    header nav ul {
+        width: 320px;
+    }
 
 }

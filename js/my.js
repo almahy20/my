@@ -5,3 +5,5 @@ menu.onclick = function(){
 menu.classList.toggle('fa-times');
 link.classList.toggle('active')
 }
+
+alert("almahy")
