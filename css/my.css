@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
     text-decoration: none;
-
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 body{
 
@@ -79,6 +79,7 @@ header nav .links a i:hover{
     background-size: cover;
     height: 100vh;
     overflow: hidden;
+    z-index: 99;
 }
 
 .box1 .box2{
@@ -133,6 +134,85 @@ header nav .links a i:hover{
 .box1 .box2 .img img{
     width:  100%;
 }
+
+#h {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 30px;
+}
+
+.projects {
+    width: 100%;
+    height: auto;
+    background-color: #1B262C;
+}
+
+.projects h2 {
+    padding-top: 70px;
+    text-align: center;
+    color: #08d665;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+strong {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 13px;
+    align-items: center;
+}
+
+.container .content {
+    width: 300px;
+    height: 250px;
+    border: 2px solid #fff;
+    margin: 30px 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .content:hover {
+    transform: scale(1.1);
+    background-color: #9c9c9c;
+}
+
+.container .content .img img {
+    width: 100%;
+    height: 150px;
+
+}
+
+.container .content .text {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.footer {
+    background-color: black;
+    color: wheat;
+    width: 100%;
+    height: 80px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+footer .links a i{
+    color: #3bad6e;
+    font-size: 24px;
+    margin-left: 15px;
+}
 @media(max-width: 980px){
     header nav ul{
         position: absolute;
@@ -180,6 +260,13 @@ header nav .links a i:hover{
     .box1 .box2 .box3 span{
         font-size: 30px;
     }
+    .container {
+        flex-direction: column;
+    }
+    .container .content {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }
 @media(max-width: 450px){
     .box1 .box2 .box3 h1{
@@ -197,5 +284,14 @@ header nav .links a i:hover{
     header nav ul {
         width: 320px;
     }
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        left: 40px;
+        bottom: 10px;
+    }
+.links a i {
+    padding-top: 10px;
+}
 
 }
