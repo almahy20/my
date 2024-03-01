@@ -22,29 +22,43 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0px 20px;
     height: 60px;
 }
 
-.left-header {
+.left-header .button-i {
     display: flex;
     align-items: center;
+    
+}
+
+.left-header .button-i i {
+}
+.right-header .button-i i {
+    transition: 0.8s;
+
+}
+
+.centar-header form {
+    display: flex;
+    justify-content: center;
 }
 
 .centar-header input {
+    width: 400px;
     padding: 5px;
-    width: 100%;
-    border-radius: 2px 0 0 2px;
-    border-right: none;
+    border-radius: 0 2px 2px 0 ;
+    border-left: none;
     border: 1px solid #d3d3d3;
     /* border: 2px solid cornflowerblue; */
+    outline: none;
 }
 
 .centar-header button {
     padding: 5px 15px;
     border:1px solid #d3d3d3;
-    border-left: none;
-    border-radius: 0 2px 2px 0;
+    border-right: none;
+    border-radius: 2px 0 0 2px;
     background-color: #fafafa;
     cursor: pointer;
 }
@@ -65,12 +79,16 @@ header {
     background-color: #fafafa;
     cursor: pointer;
     border: none;
-    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.right-header {
+    position: relative;
 }
 
 .right-header i {
     padding: 10px;
-    margin-right: 3px;
+    margin-left: 3px;
 }
 
 .content {
@@ -121,7 +139,9 @@ header {
     text-decoration: none;
 }
 .content aside nav span {
-    margin-left: 24px;
+    margin-right: 24px;
+    font-size: 15px;
+    font-weight: 500px;
 }
 
 hr {
@@ -161,7 +181,7 @@ main {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-right: 12px;
+    margin-left: 12px;
 }
 
 .contenar .title {
@@ -195,4 +215,39 @@ main {
 
 #you:hover {
     color: black;
+}
+
+@media (max-width: 850px) {
+    .centar-header form {
+        width: 150px;
+        /* transform: translateX(100px); */
+        justify-content: flex-start;
+    }
+    .content aside {
+        display: none;
+    }
+    header {
+        justify-content: space-around;
+        margin-left: 90px;
+    }
+    .left-header h2 {
+    display: none;
+    }
+    .right-header {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+
+    }
+    .right-header .button-i {
+        border-top: 2px solid #ddd;
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        background-color: white;
+    }
+    .right-header .button-i i:hover {
+        background-color: #d3d3d3;
+    }
 }
