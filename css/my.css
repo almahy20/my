@@ -172,7 +172,7 @@ strong {
     height: 300px;
     margin: 20px 0;
     border: 2px solid white;
-    border-radius: 40px;
+    border-radius: 20px;
     overflow: hidden;
     transition: 0.9s;
 }
@@ -262,13 +262,13 @@ footer .links a i{
     .box1 .box2 .box3 span{
         font-size: 30px;
     }
-    .container {
+    /* .container {
         flex-direction: column;
     }
     .container .content {
         margin-left: auto;
         margin-right: auto;
-    }
+    } */
 }
 @media(max-width: 450px){
     .box1 .box2 .box3 h1{
@@ -294,6 +294,14 @@ footer .links a i{
     }
 .links a i {
     padding-top: 10px;
+}
+.container {
+    flex-direction: column;
+}
+.container .content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
 }
 
 }

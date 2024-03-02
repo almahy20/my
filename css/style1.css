@@ -26,14 +26,15 @@ header {
     height: 60px;
 }
 
-.left-header .button-i {
+.left-header {
     display: flex;
-    align-items: center;
-    
+        
 }
 
-.left-header .button-i i {
+.centar-header {
+    position: relative;
 }
+
 .right-header .button-i i {
     transition: 0.8s;
 
@@ -223,12 +224,16 @@ main {
         /* transform: translateX(100px); */
         justify-content: flex-start;
     }
+    .centar-header {
+        position: absolut;
+        right: 20px;
+    }
     .content aside {
         display: none;
     }
     header {
         justify-content: space-around;
-        margin-left: 90px;
+        margin-left: 120px;
     }
     .left-header h2 {
     display: none;
