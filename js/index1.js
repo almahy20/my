@@ -1,8 +1,7 @@
-let aside = document.getElementsByClassName("aside");
-let min = document.getElementById("min").style{"color","red"};
+let man =document.getElementById('min');
+let man1 =document.getElementById('man1');
 
-min.onclick = function() {
-    min.classList.toggle("active")
-    aside.classList.toggle("")
-
+man.onclick = function(){
+    man1.classList.toggle('remov');
 }
+console.log('almahhy')
